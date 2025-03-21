@@ -1,0 +1,3 @@
+[submodule "organic-carbon-predictor"]
+	path = organic-carbon-predictor
+	url = ./organic-carbon-predictor
