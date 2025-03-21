@@ -1,0 +1,36 @@
+/* Full-screen overlay */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white; /* Can be changed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: fadeOut 0.5s ease-in-out 2s forwards; /* Smooth fade-out */
+  }
+  
+  /* Green Spinning Circle Loader */
+  .loader {
+    width: 60px;
+    height: 60px;
+    border: 6px solid rgba(0, 128, 0, 0.3);
+    border-top: 6px solid green;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  /* Spinning Animation */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Fade Out Animation */
+  @keyframes fadeOut {
+    100% { opacity: 0; visibility: hidden; }
+  }
+  

@@ -1,0 +1,127 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+/* Home Container */
+.home-container {
+    width: 100%;
+    height: 100vh; /* Full screen */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    height: 100vh; /* Full-screen */
+    background: url("bg-img.webp") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Dark Overlay */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Hero Content */
+.hero-content {
+    color: white;
+    text-align: center;
+    z-index: 2;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin: 10px 0 20px;
+}
+
+/* Get Started Button */
+.get-started-btn {
+    background: limegreen;
+    padding: 12px 24px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+}
+
+.get-started-btn:hover {
+    background: darkgreen;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.loading-screen {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeInOut 1.5s infinite;
+  }
+  
+  @keyframes fadeInOut {
+    0% { opacity: 0.3; }
+    50% { opacity: 1; }
+    100% { opacity: 0.3; }
+  }
+  /* Loading Screen Styles */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top: 5px solid #4CAF50; /* Green accent */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  .loading-text {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: bold;
+    opacity: 0.8;
+  }
+  
+  /* Keyframes for Spinner Animation */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
